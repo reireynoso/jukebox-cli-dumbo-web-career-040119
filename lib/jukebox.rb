@@ -62,8 +62,6 @@ def run(args)
     exit_jukebox
   end
 end
-  
-end
 
 def exit_jukebox
   puts "Goodbye"
