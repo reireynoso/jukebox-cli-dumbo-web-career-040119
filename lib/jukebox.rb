@@ -49,18 +49,19 @@ def run(args)
   help
   puts "Please enter a command:"
   command = gets.chomp
-  if command == "exit"
-    exit_jukebox
-  else
-    puts "Please enter a command:"
-    command = gets.chomp
+  until command == "exit"
+    if command == "list"
+      list
+    elsif command == "play"
+      play
+    elsif command == "help"
+      help
+    end
+  exit_jukebox
   end
+  
 end
 
 def exit_jukebox
   puts "Goodbye"
 end
-help 
-list(songs)
-#play(songs)
-exit_jukebox
