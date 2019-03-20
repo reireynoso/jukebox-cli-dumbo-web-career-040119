@@ -47,6 +47,7 @@ end
 
 def run(args) 
   help
+  puts args
   puts "Please enter a command:"
   command = gets.chomp
   if command == "list"
