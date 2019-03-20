@@ -51,7 +51,6 @@ def run(args)
   command = gets.chomp
   if command == "list"
     list
-    run
   elsif command == "play"
     play
     run(args)
