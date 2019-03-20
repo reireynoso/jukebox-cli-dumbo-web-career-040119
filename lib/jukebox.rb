@@ -49,16 +49,19 @@ def run(args)
   help
   puts "Please enter a command:"
   command = gets.chomp
-  until command == "exit"
-    if command == "list"
-      list
-    elsif command == "play"
-      play
-    elsif command == "help"
-      help
-    end
-  exit_jukebox
+  if command == "list"
+    list
+    run(args)
+  elsif command == "play"
+    play
+    run(args)
+  elsif command == "help"
+    help
+    run(args)
+  elsif command == "exit"
+    exit_jukebox
   end
+end
   
 end
 
