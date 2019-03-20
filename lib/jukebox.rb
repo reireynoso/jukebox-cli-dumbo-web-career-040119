@@ -60,6 +60,9 @@ def run(args)
     run(args)
   elsif command == "exit"
     exit_jukebox
+  else
+    puts "Invalid command. Please select from help"
+    run(args)
   end
 end
 
